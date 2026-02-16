@@ -1,0 +1,33 @@
+{
+  "name": "tienda-joyas-server",
+  "version": "1.0.0",
+  "description": "API REST - Tienda de Joyas (My Precious Spa) - Desafío Diseño avanzado de una API REST",
+  "main": "src/server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "lint": "node -c src/server.js"
+  },
+  "keywords": [
+    "express",
+    "postgres",
+    "api",
+    "rest",
+    "hateoas",
+    "mvc"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.22.1",
+    "pg": "^8.18.0",
+    "pg-format": "^1.0.4"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.11"
+  },
+  "private": true
+}

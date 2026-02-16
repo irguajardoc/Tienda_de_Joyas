@@ -1,0 +1,98 @@
+{
+  "info": {
+    "name": "Tienda de Joyas - API REST (MVC)",
+    "_postman_id": "b3b7b0e1-8d68-4e68-9b9f-77c63f67a1a1",
+    "description": "Colección para probar el desafío Tienda de Joyas (My Precious Spa). Incluye HATEOAS, paginación, ordenamiento y filtros. | Incluye front en /app para pruebas en navegador.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Healthcheck - GET /",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            ""
+          ]
+        }
+      }
+    },
+    {
+      "name": "Listado HATEOAS - GET /joyas (limits, page, order_by)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/joyas?limits=3&page=2&order_by=stock_ASC",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "joyas"
+          ],
+          "query": [
+            {
+              "key": "limits",
+              "value": "3"
+            },
+            {
+              "key": "page",
+              "value": "2"
+            },
+            {
+              "key": "order_by",
+              "value": "stock_ASC"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Filtros - GET /joyas/filtros (precio_min, precio_max, categoria, metal)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/joyas/filtros?precio_min=25000&precio_max=30000&categoria=aros&metal=plata",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "joyas",
+            "filtros"
+          ],
+          "query": [
+            {
+              "key": "precio_min",
+              "value": "25000"
+            },
+            {
+              "key": "precio_max",
+              "value": "30000"
+            },
+            {
+              "key": "categoria",
+              "value": "aros"
+            },
+            {
+              "key": "metal",
+              "value": "plata"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:3000",
+      "type": "string"
+    }
+  ]
+}

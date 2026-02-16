@@ -1,0 +1,10 @@
+{
+  "name": "tienda-joyas-fullstack",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "server": "npm --prefix server run dev",
+    "client": "npm --prefix client run dev",
+    "dev": "npx concurrently -n server,client \"npm --prefix server run dev\" \"npm --prefix client run dev\""
+  }
+}
